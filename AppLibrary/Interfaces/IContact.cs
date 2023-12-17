@@ -3,6 +3,9 @@ namespace AppLibrary.Interfaces;
 
 public interface IContact
 {
+    /// <summary>
+    /// Sets the different info the program wants to create a Contact
+    /// </summary>    
     string FirstName { get; set; }
     string LastName { get; set; }
     string Email { get; set; }

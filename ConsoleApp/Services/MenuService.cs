@@ -36,6 +36,8 @@ public class MenuService
             Console.WriteLine();
             Console.WriteLine("5. Quit program");
             Console.WriteLine();
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine();
             Console.Write("Please select one of options above :");
             var answer = Console.ReadLine();
 
@@ -63,15 +65,18 @@ public class MenuService
                         Console.WriteLine($"Postal Code: {contact.PostalCode}   {contact.City}");
                         Console.WriteLine();
                         Console.WriteLine("----------------------------------------------------");
+                        Console.WriteLine();
+                       
                         index++;
                     }
+                    Console.WriteLine("Press any key to return to main menu");
                     Console.ReadKey();
                     break;
 
                 case "2":
                     Console.Clear();
                     Console.Write("Please enter email of person you are searching for: ");
-                    string searchedEmail = Console.ReadLine()?.ToLower() ?? "";
+                    string searchedEmail = Console.ReadLine()?.ToLower()?.Trim() ?? "";
                     Console.WriteLine();
                     IContact foundPerson = _contactService.GetContactFromList(searchedEmail);
 
@@ -90,6 +95,8 @@ public class MenuService
                         Console.WriteLine($"City: {foundPerson.City}");
                         Console.WriteLine();
                         Console.WriteLine("-----------------------------------------------");
+                        Console.WriteLine();
+                        Console.WriteLine("Press any key to return to main menu");
                         Console.ReadKey();
                         break;
                     }
@@ -106,7 +113,7 @@ public class MenuService
                 case "3":
                     Console.Clear();
                     Console.Write("Please enter email of person you want to remove: ");
-                    string deleteEmail = Console.ReadLine()?.ToLower() ?? "";
+                    string deleteEmail = Console.ReadLine()?.ToLower()?.Trim() ?? "";
                     Console.WriteLine();
                     IContact deletePerson = _contactService.GetContactFromList(deleteEmail);
 
@@ -121,6 +128,8 @@ public class MenuService
                             case "y":
                                 _contactService.RemoveContactFromList(deleteEmail);
                                 Console.WriteLine($"{deletePerson.FirstName} {deletePerson.LastName} has been removed");
+                                Console.WriteLine();
+                                Console.WriteLine("Press any key to return to main menu");
                                 Console.ReadKey();
                                 break;
 
@@ -131,7 +140,7 @@ public class MenuService
                                 break;
 
                             default:
-                                Console.WriteLine("Invalid option try again");
+                                Console.WriteLine("Invalid option press any key to try again");
                                 Console.ReadKey();
                                 break;
                         }
@@ -153,14 +162,16 @@ public class MenuService
                 case "4":
                     Console.Clear();
                     var newContact = new Contact();
-
-                    Console.Write("First:");
+                    Console.WriteLine("Please enter the following info");
+                    Console.WriteLine();
+                    Console.WriteLine("---------------------------------");
+                    Console.Write("First Name:");
                     newContact.FirstName = Console.ReadLine() ?? "";
-                    Console.Write("Last:");
+                    Console.Write("Last Name:");
                     newContact.LastName = Console.ReadLine() ?? "";
-                    Console.Write("Email:");
-                    newContact.Email = Console.ReadLine()?.ToLower() ?? "";
-                    Console.Write("Street:");
+                    Console.Write("Email Address:");
+                    newContact.Email = Console.ReadLine()?.ToLower()?.Trim() ?? "";
+                    Console.Write("Streetname and Number:");
                     newContact.StreetAddress = Console.ReadLine() ?? "";
                     Console.Write("Postal Code:");
                     newContact.PostalCode = Console.ReadLine() ?? "";
@@ -170,6 +181,8 @@ public class MenuService
                     newContact.PhoneNumber = Console.ReadLine() ?? "";
 
                     _contactService.AddContactToList(newContact);
+                    Console.WriteLine("Press any key to return to main menu");
+                    Console.ReadKey();
 
                     break;
 
