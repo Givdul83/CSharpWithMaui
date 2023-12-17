@@ -6,11 +6,11 @@ using System;
 
 namespace ConsoleApp.Services;
 
-internal class MenuService
+public class MenuService
 {
-    private readonly ContactService _contactService;
+    private readonly IContactService _contactService;
 
-    public MenuService(ContactService contactService)
+    public MenuService(IContactService contactService)
     {
         _contactService = contactService;
     }
