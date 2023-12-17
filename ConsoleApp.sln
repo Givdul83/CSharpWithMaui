@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppLibrary", "AppLibrary\AppLibrary.csproj", "{91A510F6-7463-45BE-B50F-3FBBA8EE3992}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamCSharp.Test", "ExamCSharp.Test\ExamCSharp.Test.csproj", "{CF4290A4-635D-4B39-B10C-267726DE2022}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{91A510F6-7463-45BE-B50F-3FBBA8EE3992}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91A510F6-7463-45BE-B50F-3FBBA8EE3992}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91A510F6-7463-45BE-B50F-3FBBA8EE3992}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF4290A4-635D-4B39-B10C-267726DE2022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF4290A4-635D-4B39-B10C-267726DE2022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF4290A4-635D-4B39-B10C-267726DE2022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF4290A4-635D-4B39-B10C-267726DE2022}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
