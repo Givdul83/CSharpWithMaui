@@ -36,7 +36,7 @@ public class ContactService : IContactService
     {
         try
         {
-            GetContactsFromList();
+            _contacts = GetContactsFromList().ToList();
 
             if (!_contacts.Any(x => x.Email == contact.Email))
             {
@@ -63,7 +63,8 @@ public class ContactService : IContactService
     {
         try
         {
-            GetContactsFromList();
+            _contacts = GetContactsFromList().ToList();
+
             var contact = _contacts.FirstOrDefault(x => x.Email == email);
             return contact ??= null!;
 
@@ -83,17 +84,22 @@ public class ContactService : IContactService
         try
         {
             var content = _fileService.GetContent(_filePath);
+            _contacts.Clear();
 
             if (!string.IsNullOrEmpty(content))
             {
+                
                 _contacts = JsonConvert.DeserializeObject<List<IContact>>(content, new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All })!;
+                Console.WriteLine($"Contacts loaded: {_contacts.Count}");
+
+               
                 return _contacts;
             }
 
 
         }
         catch (Exception ex) { Debug.WriteLine("ContactService- GetContactsFromList" + ex.Message); }
-        return null!;
+        return Enumerable.Empty<IContact>();
     }
 
     /// <summary>
@@ -108,7 +114,7 @@ public class ContactService : IContactService
     {
         try
         {
-            GetContactsFromList();
+            _contacts = GetContactsFromList().ToList();
             var contact = _contacts.FirstOrDefault(x => x.Email == email);
 
             if (contact != null)
