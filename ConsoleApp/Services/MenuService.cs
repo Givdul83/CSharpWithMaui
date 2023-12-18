@@ -75,13 +75,11 @@ public class MenuService
     }
     private void ShowList()
     {
-        
-       
         Console.Clear();
         Console.WriteLine("###  All Contacts  ###");
         Console.WriteLine();
         int index = 1;
-        var list = _contactService.GetContactsFromList();
+        var list = _contactService.GetContactsFromList().ToList()?? new List<IContact>();
 
         if (list != null)
         {
@@ -103,6 +101,9 @@ public class MenuService
 
                 index++;
             }
+            list.Clear();
+            list = null;
+            index = 0;
         }
         else
         {
@@ -111,7 +112,8 @@ public class MenuService
         
         Console.WriteLine("Press any key to return to main menu");
         Console.ReadKey();
-       
+        
+        
 
     }
 
