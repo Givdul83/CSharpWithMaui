@@ -9,16 +9,36 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        
+
+        private async void Add_Btn_Clicked(object sender, EventArgs e)
         {
-            count++;
+            await Shell.Current.GoToAsync("//AddPage");
+        }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+        private async void Search_Btn_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//SearchPage");
+        }
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+        private async void ShowList_Btn_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//ShowListPage");
+        }
+
+        private async void Remove_Btn_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//RemovePage");
+        }
+
+        private async void Update_Btn_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//UpdatePage");
+        }
+
+        private async void Quit_Btn_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//QuitPage");
         }
     }
 
