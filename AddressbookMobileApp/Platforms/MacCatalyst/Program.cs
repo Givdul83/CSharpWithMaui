@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace MobileApp
+namespace AddressbookMobileApp
 {
     public class Program
     {

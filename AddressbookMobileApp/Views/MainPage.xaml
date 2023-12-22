@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             xmlns:viewmodels="clr-namespace:AddressbookMobileApp.ViewModels"
+             x:DataType="{x:Type viewmodels:MainViewModel}"
+             
+             x:Class="AddressbookMobileApp.MainPage">
+
+	<ScrollView>
+		<Grid RowDefinitions="auto, auto, auto, auto" Margin="25">
+            <VerticalStackLayout Grid.Row="0">
+                <Label Text="Contact Book " FontSize="25" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="1">
+                <Image Source="book.png"
+                       MaximumHeightRequest="600"
+                       MaximumWidthRequest="600"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="2">
+                <Label Text="Welcome to your Contact Book" 
+                       FontSize="20" 
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center" 
+                       Margin="0,20,20,0"/>
+                <Label Text=" Please Select an option"
+                       FontSize="15"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Italic"
+                       Margin="0,20,20,0"/>
+            </VerticalStackLayout>
+            
+            <VerticalStackLayout Grid.Row="3">
+            <Button x:Name="Btn_ShowList"
+                    Text="Show all Contacts"
+                    Clicked="Btn_ShowList_Clicked"
+                    Margin="30,20,30,20"
+                    HorizontalOptions="FillAndExpand"
+                    MaximumWidthRequest="600"
+                    ></Button>
+                
+            <Button x:Name="Btn_Search" 
+                    Text="Search for Contact"
+                    Clicked="Btn_Search_Clicked"
+                    Margin="30,20,30,20"
+                    HorizontalOptions="FillAndExpand"
+                    MaximumWidthRequest="600"
+                    ></Button>
+                
+            <Button x:Name="Btn_Add"
+                    Text="Add Contact"
+                    Clicked="Btn_Add_Clicked"
+                    Margin="30,20,30,20"
+                    HorizontalOptions="FillAndExpand"
+                    MaximumWidthRequest="600"
+                    ></Button>
+                
+            <Button x:Name="Btn_Remove"
+                    Text="Remove Contact"
+                    Clicked="Btn_Remove_Clicked"
+                    Margin="30,20,30,20"
+                    HorizontalOptions="FillAndExpand"
+                    MaximumWidthRequest="600"
+                    ></Button>
+                
+            <Button x:Name="Btn_Update"
+                    Text="Update Contact"
+                    Clicked="Btn_Update_Clicked"
+                    Margin="30,20,30,20"
+                    HorizontalOptions="FillAndExpand"
+                    MaximumWidthRequest="600"
+                    ></Button>
+                
+            <Button x:Name="Btn_Quit"
+                    Text="Quit program"
+                    Clicked="Btn_Quit_Clicked"
+                    Margin="30,20,30,20"
+                    HorizontalOptions="FillAndExpand"
+                    MaximumWidthRequest="600"
+                    ></Button>
+            </VerticalStackLayout>
+        </Grid>
+	</ScrollView>
+
+</ContentPage>

@@ -2,7 +2,7 @@ using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using System;
 
-namespace MobileApp
+namespace AddressbookMobileApp
 {
     internal class Program : MauiApplication
     {

@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppLibrary", "AppLibrary\Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamCSharp.Test", "ExamCSharp.Test\ExamCSharp.Test.csproj", "{CF4290A4-635D-4B39-B10C-267726DE2022}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileApp", "MobileApp\MobileApp.csproj", "{63E7A9B9-ACDF-460C-ACCE-E67F2C52D7DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressbookMobileApp", "AddressbookMobileApp\AddressbookMobileApp.csproj", "{1CD5617B-3FCD-438C-A19B-CA1D772CBD6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,12 +29,12 @@ Global
 		{CF4290A4-635D-4B39-B10C-267726DE2022}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF4290A4-635D-4B39-B10C-267726DE2022}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF4290A4-635D-4B39-B10C-267726DE2022}.Release|Any CPU.Build.0 = Release|Any CPU
-		{63E7A9B9-ACDF-460C-ACCE-E67F2C52D7DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63E7A9B9-ACDF-460C-ACCE-E67F2C52D7DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63E7A9B9-ACDF-460C-ACCE-E67F2C52D7DA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{63E7A9B9-ACDF-460C-ACCE-E67F2C52D7DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{63E7A9B9-ACDF-460C-ACCE-E67F2C52D7DA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{63E7A9B9-ACDF-460C-ACCE-E67F2C52D7DA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1CD5617B-3FCD-438C-A19B-CA1D772CBD6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD5617B-3FCD-438C-A19B-CA1D772CBD6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD5617B-3FCD-438C-A19B-CA1D772CBD6D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1CD5617B-3FCD-438C-A19B-CA1D772CBD6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD5617B-3FCD-438C-A19B-CA1D772CBD6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CD5617B-3FCD-438C-A19B-CA1D772CBD6D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,9 @@
-﻿using AppLibrary.Services;
+﻿using AddressbookMobileApp.ViewModels;
+using AppLibrary.Interfaces;
+using AppLibrary.Services;
 using Microsoft.Extensions.Logging;
 
-namespace MobileApp
+namespace AddressbookMobileApp
 {
     public static class MauiProgram
     {
@@ -16,14 +18,15 @@ namespace MobileApp
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            builder.Services.AddSingleton<FileService>();
-            builder.Services.AddSingleton<ContactService>();
+            builder.Services.AddSingleton<IFileService, FileService>();
+            builder.Services.AddSingleton<IContactService, ContactService>();
+
+            builder.Services.AddSingleton<MainViewModel>();
+            builder.Services.AddSingleton<MainPage>();
 
 
-#if DEBUG
-    		builder.Logging.AddDebug();
-#endif
 
+            builder.Logging.AddDebug();
             return builder.Build();
         }
     }

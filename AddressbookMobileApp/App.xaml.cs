@@ -1,4 +1,4 @@
-﻿namespace MobileApp
+﻿namespace AddressbookMobileApp
 {
     public partial class App : Application
     {
