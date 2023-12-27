@@ -1,4 +1,5 @@
 ﻿using AddressbookMobileApp.ViewModels;
+using AddressbookMobileApp.Views;
 using AppLibrary.Interfaces;
 using AppLibrary.Services;
 using Microsoft.Extensions.Logging;
@@ -22,8 +23,19 @@ namespace AddressbookMobileApp
             builder.Services.AddSingleton<IContactService, ContactService>();
 
             builder.Services.AddSingleton<MainViewModel>();
+            builder.Services.AddSingleton<ViewListModel>();
+            builder.Services.AddSingleton<SearchVievModel>();
+            builder.Services.AddSingleton<AddVievModel>();
+            builder.Services.AddSingleton<RemoveViewModel>();
+            builder.Services.AddSingleton<UpdateViewModel>();
+            builder.Services.AddSingleton<ExitViewModel>();
             builder.Services.AddSingleton<MainPage>();
-
+            builder.Services.AddSingleton<ListPage>();
+            builder.Services.AddSingleton<SearchPage>();
+            builder.Services.AddSingleton<AddPage>();
+            builder.Services.AddSingleton<RemovePage>();
+            builder.Services.AddSingleton<UpdatePage>();
+            builder.Services.AddSingleton<ExitPage>();
 
 
             builder.Logging.AddDebug();

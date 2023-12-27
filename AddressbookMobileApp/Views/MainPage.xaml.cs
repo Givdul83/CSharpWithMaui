@@ -1,44 +1,51 @@
 ﻿using AddressbookMobileApp.ViewModels;
+using AddressbookMobileApp.Views;
+using Microsoft.Maui.Controls;
+using CommunityToolkit.Mvvm.Messaging.Messages;
 
 namespace AddressbookMobileApp
 {
     public partial class MainPage : ContentPage
     {
-
-        public MainPage(MainViewModel viewModel)
+        private MainViewModel _viewModel;
+        public MainPage()
         {
             InitializeComponent();
-            BindingContext = viewModel;
+            _viewModel = new MainViewModel();
+            BindingContext = _viewModel;
+        
+        
+            
         }
 
-        private void Btn_ShowList_Clicked(object sender, EventArgs e)
+        private async void Btn_ShowList_Clicked(object sender, EventArgs e)
         {
-
+            await Shell.Current.GoToAsync("ListPage");
         }
 
-        private void Btn_Search_Clicked(object sender, EventArgs e)
+        private async void Btn_Search_Clicked(object sender, EventArgs e)
         {
-
+            await Shell.Current.GoToAsync("SearchPage");
         }
 
-        private void Btn_Add_Clicked(object sender, EventArgs e)
+        private async void Btn_Add_Clicked(object sender, EventArgs e)
         {
-
+            await Shell.Current.GoToAsync("AddPage");
         }
 
-        private void Btn_Remove_Clicked(object sender, EventArgs e)
+        private async void Btn_Remove_Clicked(object sender, EventArgs e)
         {
-
+            await Shell.Current.GoToAsync("RemovePage");
         }
 
-        private void Btn_Update_Clicked(object sender, EventArgs e)
+        private async void Btn_Update_Clicked(object sender, EventArgs e)
         {
-
+            await Shell.Current.GoToAsync("UpdatePage");
         }
 
-        private void Btn_Quit_Clicked(object sender, EventArgs e)
+        private async void Btn_Quit_Clicked(object sender, EventArgs e)
         {
-
+            await Shell.Current.GoToAsync("ExitPage");
         }
     }
 
