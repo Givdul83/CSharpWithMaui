@@ -10,10 +10,25 @@
 
        
              Title="ListPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Contacts"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+    <Grid RowDefinitions="auto, auto" Margin="20">
+        <VerticalStackLayout Grid.Row="0">
+            <Label 
+                Text="Contacts" 
+                FontSize="25"
+                FontAttributes="Italic"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+                <StackLayout 
+                    x:Name="StackLayout_ContactsList" 
+                    Grid.Row="1"  
+                    HorizontalOptions="Center">
+
+
+
+                </StackLayout>
+            </VerticalStackLayout>
+    </Grid>
+    </ScrollView>
 </ContentPage>

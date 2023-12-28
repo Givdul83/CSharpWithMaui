@@ -24,7 +24,7 @@ namespace AddressbookMobileApp
 
             builder.Services.AddSingleton<MainViewModel>();
             builder.Services.AddSingleton<ViewListModel>();
-            builder.Services.AddSingleton<SearchVievModel>();
+            builder.Services.AddSingleton<SearchViewModel>();
             builder.Services.AddSingleton<AddVievModel>();
             builder.Services.AddSingleton<RemoveViewModel>();
             builder.Services.AddSingleton<UpdateViewModel>();

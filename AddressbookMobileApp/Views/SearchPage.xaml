@@ -4,13 +4,55 @@
              x:Class="AddressbookMobileApp.Views.SearchPage"
              xmlns:models="clr-namespace:AppLibrary.Models;assembly=AppLibrary"
              xmlns:viewmodels="clr-namespace:AddressbookMobileApp.ViewModels"
-             x:DataType="{x:Type viewmodels:SearchVievModel}"
+             x:DataType="{x:Type viewmodels:SearchViewModel}"
              xmlns:local="clr-namespace:AddressbookMobileApp"
              Title="SearchPage">
+
+    <ScrollView>
     <VerticalStackLayout>
-        <Label 
-            Text="Search for Contact"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+            <Grid RowDefinitions="auto, auto, auto, auto, auto" Margin="20" BackgroundColor="Beige">
+
+
+                <Label Grid.Row="0"
+                        Text="Search for Contact"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                        FontSize="20"
+                        FontAttributes="Italic"
+                        Margin="0,20,0,20"/>
+
+
+                <Label Grid.Row="1"
+                        Text="Enter Email of Contact you want to find:"
+                        HorizontalOptions="Center"
+                        Margin="0,20,0,20"/>
+                
+                <Entry Grid.Row="2"
+                       x:Name="Entry_Email"
+                       HorizontalOptions="CenterAndExpand"
+                       MinimumWidthRequest="300"
+                       Margin="0,20,0,20"
+                       BackgroundColor="White"
+               />
+
+
+                <Button Grid.Row="3"
+                        x:Name="Button_Search" 
+                        Text="Press to Search"
+                        Clicked="Button_Search_Clicked"
+                        HorizontalOptions="FillAndExpand"
+                        MaximumWidthRequest="600"
+                        Margin="0,20,0,20"/>
+
+
+                <Label Grid.Row="4"
+                       x:Name="Found_Contact"
+                       HorizontalOptions="Center"
+                       FontSize="20"
+                        Margin="0,20,0,20"
+                       
+                       />
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
