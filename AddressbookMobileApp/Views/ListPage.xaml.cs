@@ -14,48 +14,16 @@ public partial class ListPage : ContentPage
 
 {
     private ViewListModel _viewModel;
-	
 
-	public ListPage(ViewListModel viewModel, IContactService contactService)
-	{
+
+
+    public ListPage(ViewListModel viewModel, IContactService contactService)
+    {
         InitializeComponent();
-        _viewModel= viewModel;
-		_viewModel.Contacts= new ObservableCollection<IContact>(contactService.GetContactsFromList());
-
-        foreach (var contact in _viewModel.Contacts)
-        {
-            var nameLabel = new Label
-            {
-                Text =$"{contact.FirstName} {contact.LastName}",
-                FontSize= 20,
-                Margin = 20,
-               
-                FontAttributes = FontAttributes.Bold
-                
-               
-            };
-
-            var emailLabel= new Label
-            { 
-                Text = $"Email:{contact.Email}",
-                Margin = 10,
-                FontSize=15,
-                FontAttributes= FontAttributes.Italic
-            };
-
-            StackLayout_ContactsList.Children.Add(nameLabel);
-            StackLayout_ContactsList.Children.Add(emailLabel);
-
-        }
-
-
-
-
+        _viewModel = viewModel;
+        _viewModel.Contacts = new ObservableCollection<IContact>(contactService.GetContactsFromList());
         BindingContext = _viewModel;
-	}
 
-    
-    
 
-    
+    } 
 }

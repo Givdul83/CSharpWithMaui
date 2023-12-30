@@ -20,14 +20,29 @@
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
 
-                <StackLayout 
-                    x:Name="StackLayout_ContactsList" 
-                    Grid.Row="1"  
+                <CollectionView
+                    x:Name="Collection_ContactsList" 
+                    Grid.Row="1"
+                    ItemsSource="{Binding Contacts}"
+                    SelectionMode="None"
                     HorizontalOptions="Center">
 
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="{x:Type models:Contact}">
+                            <Frame BackgroundColor="Transparent" CornerRadius="0" BorderColor="Black" Padding="5">
+                                <Grid ColumnDefinitions="auto,auto" RowDefinitions ="auto, auto" Margin="10" HorizontalOptions="CenterAndExpand">
+
+                                    <Label Grid.Column="0" Grid.Row="0" Text="{Binding FirstName}"  FontSize="20" HorizontalTextAlignment="End" Margin="0,0,5,0"/>
+                                    <Label Grid.Column="1"  Grid.Row="0" Text="{Binding LastName}"  FontSize="20" HorizontalTextAlignment="Start"/>
+                                    <Label Grid.ColumnSpan="2" Grid.Row="1" Text="{Binding Email}" FontSize="20" HorizontalTextAlignment="Center"/>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
 
 
-                </StackLayout>
+
+                </CollectionView>
             </VerticalStackLayout>
     </Grid>
     </ScrollView>
