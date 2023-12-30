@@ -23,14 +23,14 @@ namespace AddressbookMobileApp
             builder.Services.AddSingleton<IContactService, ContactService>();
 
             builder.Services.AddSingleton<MainViewModel>();
-            builder.Services.AddSingleton<ViewListModel>();
+            builder.Services.AddTransient<ViewListModel>();
             builder.Services.AddSingleton<SearchViewModel>();
             builder.Services.AddSingleton<AddViewModel>();
             builder.Services.AddSingleton<RemoveViewModel>();
             builder.Services.AddSingleton<UpdateViewModel>();
             builder.Services.AddSingleton<ExitViewModel>();
             builder.Services.AddSingleton<MainPage>();
-            builder.Services.AddSingleton<ListPage>();
+            builder.Services.AddTransient<ListPage>();
             builder.Services.AddSingleton<SearchPage>();
             builder.Services.AddSingleton<AddPage>();
             builder.Services.AddSingleton<RemovePage>();
